@@ -1,0 +1,14 @@
+<h2>Track Your Order</h2>
+<label>Enter Order ID:</label>
+<input type="text" id="orderId">
+<button onclick="trackOrder()">Track</button>
+<p id="orderStatus"></p>
+
+<script>
+function trackOrder() {
+    let orderId = document.getElementById("orderId").value;
+    let status = ["Processing", "Shipped", "Out for Delivery", "Delivered"];
+    let randomStatus = status[Math.floor(Math.random() * status.length)];
+    document.getElementById("orderStatus").textContent = "Order Status: " + randomStatus;
+}
+</script>
